@@ -56,7 +56,7 @@ internal class GameSceneHandler : EventBehaviour
     {
         GameManager.Get().Score = 0;
         GameManager.Get().Level = 1;
-        GameManager.Get().Hp = 3;
+        GameManager.Get().Hp = DataManager.Get().Data.DefaultPlayerHp;
 
         StopGameRoutine();
         _gameRoutine = StartCoroutine(AddScoreRoutine());

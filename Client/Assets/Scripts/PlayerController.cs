@@ -28,6 +28,12 @@ public class PlayerController : EventBehaviour
         gameObject.SetActive(false);
     }
 
+    private void Start()
+    {
+        this.MoveSpeed = DataManager.Get().Data.DefaultPlayerSpeed;
+        this.JumpPower = DataManager.Get().Data.DefaultPlayerJumpPower;
+    }
+
     private void Update()
     {
         if (Input.GetButtonDown("Jump") && _animator.GetBool("isJump") == false)
